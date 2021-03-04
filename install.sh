@@ -53,7 +53,7 @@ esac
 
 mkdir -p "$MANIFEST_LOCATION"
 
-APP_NAME="com.rsnous.tabfs"
+APP_NAME="network.novak.tabfs"
 EXE_PATH=$(pwd)/fs/tabfs
 
 case "$BROWSER" in
@@ -65,7 +65,7 @@ case "$BROWSER" in
   "description": "TabFS",
   "path": "$EXE_PATH",
   "type": "stdio",
-  "allowed_extensions": ["tabfs@rsnous.com"],
+  "allowed_extensions": ["tabfs@novak.network"],
   "allowed_origins": ["chrome-extension://$EXTENSION_ID/"]
 }
 EOF
@@ -77,7 +77,7 @@ EOF
   "description": "TabFS",
   "path": "$EXE_PATH",
   "type": "stdio",
-  "allowed_extensions": ["tabfs@rsnous.com"]
+  "allowed_extensions": ["tabfs@novak.network"]
 }
 EOF
         );;

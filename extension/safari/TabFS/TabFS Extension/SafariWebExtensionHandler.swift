@@ -33,7 +33,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         // And with the WebSocket, the server can talk straight to background.js, whereas
         // native messaging would require us here to sit in the middle.)
 
-        let connection = NSXPCConnection(serviceName: "com.rsnous.TabFSService")
+        let connection = NSXPCConnection(serviceName: "network.novak.TabFSService")
         connection.remoteObjectInterface = NSXPCInterface(with: TabFSServiceProtocol.self)
         connection.resume()
         

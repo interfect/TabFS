@@ -10,7 +10,7 @@ import SafariServices.SFSafariApplication
 import SafariServices.SFSafariExtensionManager
 
 let appName = "TabFS"
-let extensionBundleIdentifier = "com.rsnous.TabFS-Extension"
+let extensionBundleIdentifier = "network.novak.TabFS-Extension"
 
 class ViewController: NSViewController {
 

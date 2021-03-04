@@ -733,7 +733,7 @@ function tryConnect() {
   // and boot a WebSocket, then connect to it.
   // Is there a better way to do this?
   if (chrome.runtime.getURL('/').startsWith('safari-web-extension://')) { // Safari-only
-    chrome.runtime.sendNativeMessage('com.rsnous.tabfs', {op: 'safari_did_connect'}, resp => {
+    chrome.runtime.sendNativeMessage('network.novak.tabfs', {op: 'safari_did_connect'}, resp => {
       console.log(resp);
 
       let socket;
@@ -759,7 +759,7 @@ function tryConnect() {
     return;
   }
   
-  port = chrome.runtime.connectNative('com.rsnous.tabfs');
+  port = chrome.runtime.connectNative('network.novak.tabfs');
   port.onMessage.addListener(onMessage);
   port.onDisconnect.addListener(p => {console.log('disconnect', p)});
 }
