@@ -7,3 +7,5 @@ This add-on exposes as much of your browser's internal state as possible to othe
 You can use this add-on to integrate your browser with your own command line tools and shell scripts as part of your personal workflow.
 
 You **SHOULD NOT** use this add-on if you have **ANY** possibility of having programs you do not trust running on your computer. The add-on will provide them an easy way to get at the internals of your browser, without having to resort to serious hacker techniques like attaching a debugger to the process.
+
+To use the extension, after installing it, you will need to follow the instructions from [https://omar.website/tabfs/#2-install-the-c-filesystem](https://omar.website/tabfs/#2-install-the-c-filesystem), using the appropriate version of the companion filesystem driver tool found at [https://github.com/interfect/TabFS](https://github.com/interfect/TabFS).
