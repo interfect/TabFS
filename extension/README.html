@@ -1,0 +1,29 @@
+<b>Novak TabFS Fork</b>
+
+It's like <i>/sys</i> for your browser!
+
+This add-on exposes as much of your browser's internal state as possible to other processes on your computer via the filesystem. It allows all other processes to see all information about the internal state of the browser (including the web addresses you are browsing to and images of the contents of your web pages), and to control the browser and the pages within it.
+
+<strong>Note that this add-on exposes ALMOST ALL important and sensitive information about your browsing to its companion application, and from there, through a FUSE filesystem, to ALL other applications on your computer.</strong>
+
+You can use this add-on to integrate your browser with your own command line tools and shell scripts as part of your personal workflow.
+
+You <strong>SHOULD NOT</strong> use this add-on if you have <strong>ANY</strong> possibility of having programs you do not trust running on your computer. The add-on will provide them an easy way to get at the internals of your browser, without having to resort to serious hacker techniques like attaching a debugger to the process.
+
+To use the extension, after installing it, you will need to follow the instructions from <a href="https://omar.website/tabfs/#2-install-the-c-filesystem">https://omar.website/tabfs/#2-install-the-c-filesystem</a>, using the appropriate version of the companion filesystem driver tool found at <a href="https://github.com/interfect/TabFS">https://github.com/interfect/TabFS</a>.
+
+<b>Privacy Policy</b>
+
+The developers of this add-on have not programmed it to collect and return any information to them or third parties. However, the add-on is specifically designed to collect almost all information about the current state of the browser and the pages within it, which it then shares with its companion local application, which then shares it with any other application on the system that has access to the filesystem. The information exposed is:
+<ul>
+<li>Tab URLs</li>
+<li>Tab page titles</li>
+<li>Tab page contents</li>
+<li>Internal state of running scripts on tab pages</li>
+<li>Content entered into forms on tab pages</li>
+<li>Images of tab pages</li>
+<li>Browser window and tab arrangement, and which tabs and windows are selected</li>
+<li>Other extensions and whether they are enabled</li>
+<li>If the browser supports the "debugger" API, all information on page resources and scripts available through that API.</li>
+</ul>
+Additionally, because the add-on allows the insertion of executable code into running pages, all information available to all open tabs is available through the extension. Because the extension allows the opening of new tabs, all information available to all web sites that could be opened is available through the extension.
